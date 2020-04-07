@@ -34,6 +34,10 @@
 
                     Console.WriteLine(value: response);
 
+                    WriteStream(
+                        stream: stream,
+                        message: "HTTP/1.0 200 OK\r\nContent-Length: 21\r\ncontent-type: text/html; charset=utf-8\r\nConnection: close\r\n\r\n<h1>Hello world!</h1>");
+
                     stream.Close();
 
                     client.Close();
